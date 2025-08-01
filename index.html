@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Welcome to our Grocery Program</title>
+		<!-- Meta Pixel Code -->
+		<script>
+			!(function (f, b, e, v, n, t, s) {
+				if (f.fbq) return
+				n = f.fbq = function () {
+					n.callMethod
+						? n.callMethod.apply(n, arguments)
+						: n.queue.push(arguments)
+				}
+				if (!f._fbq) f._fbq = n
+				n.push = n
+				n.loaded = !0
+				n.version = '2.0'
+				n.queue = []
+				t = b.createElement(e)
+				t.async = !0
+				t.src = v
+				s = b.getElementsByTagName(e)[0]
+				s.parentNode.insertBefore(t, s)
+			})(
+				window,
+				document,
+				'script',
+				'https://connect.facebook.net/en_US/fbevents.js'
+			)
+			fbq('init', '1417082162390960')
+			fbq('track', 'PageView')
+		</script>
+		<noscript
+			><img
+				height="1"
+				width="1"
+				style="display: none"
+				src="https://www.facebook.com/tr?id=1417082162390960&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Meta Pixel Code -->
+		<script>
+			!(function () {
+				'use strict'
+				var n = 'lp_ref',
+					t = 'cpid',
+					e = 'lpurl',
+					c = 'https://suggestionsfinder.com',
+					r = '(?<domain>http(?:s?)://[^/]*)'.concat('/cf/click'),
+					a = '(?:(?:/(?<cta>[1-9][0-9]*)/?)|(?:/))?',
+					i = '^'.concat(r).concat(a).concat('(?:$|(\\?.*))'),
+					o = 'javascript:window.clickflare.l="(?<original_link>'
+						.concat(r)
+						.concat(a, '("|(\\?[^"]*"))).*'),
+					s = function () {
+						return new RegExp(i, '')
+					},
+					u = function () {
+						return new RegExp(o, '')
+					}
+				function l(n) {
+					var t = (function (n) {
+						return n.replace(s(), function (n) {
+							for (var t = [], e = 1; e < arguments.length; e++)
+								t[e - 1] = arguments[e]
+							var r = t[t.length - 1].domain
+							return n.replace(r, c)
+						})
+					})(n)
+					return 'javascript:window.clickflare.l="'.concat(t, '"; void 0;')
+				}
+				function f(n, t) {
+					if (
+						(t && n && t.apply(document, [n]),
+						/loaded|interactive|complete/.test(document.readyState))
+					)
+						for (var e = 0, c = document.links.length; e < c; e++)
+							if (s().test(document.links[e].href)) {
+								var r = document.links[e]
+								window.clickflare.links_replaced.has(r) ||
+									((r.href = l(r.href)),
+									window.clickflare.links_replaced.add(r))
+							}
+				}
+				var d, h, m, p
+				!(function (r, a) {
+					var i = document.onreadystatechange
+					window.clickflare ||
+						((window.clickflare = {
+							listeners: {},
+							customParams: {},
+							links_replaced: new Set(),
+							addEventListener: function (n, t) {
+								var e = this.listeners[n] || []
+								e.includes(t) || e.push(t), (this.listeners[n] = e)
+							},
+							dispatchEvent: function (n, t) {
+								t && (this.customParams[n] = t),
+									(this.listeners[n] || []).forEach(function (n) {
+										return n(t)
+									})
+							},
+							push: function (n, t) {
+								t && (this.customParams[n] = t),
+									(this.listeners[n] || []).forEach(function (n) {
+										return n(t)
+									})
+							},
+						}),
+						(document.onreadystatechange = function (n) {
+							return f(n, i)
+						}),
+						f(null, i),
+						setTimeout(function () {
+							!(function (r, a) {
+								var i,
+									o = (function (r, a) {
+										var i = new URL(''.concat(c).concat(r)),
+											o = '{',
+											s = o + o
+										a.startsWith(s) || i.searchParams.set(t, a)
+										return (
+											i.searchParams.append(n, document.referrer),
+											i.searchParams.append(e, location.href),
+											i.searchParams.append('lpt', document.title),
+											i.searchParams.append(
+												't',
+												new Date().getTime().toString()
+											),
+											i.toString()
+										)
+									})(r, a),
+									s = document.createElement('script'),
+									l = document.scripts[0]
+								;(s.async = 1),
+									(s.src = o),
+									(s.onerror = function () {
+										!(function () {
+											for (
+												var n = function (n, t) {
+														var e = document.links[n]
+														u().test(e.href) &&
+															setTimeout(function () {
+																e &&
+																	e.setAttribute(
+																		'href',
+																		(function (n) {
+																			var t = n.match(u())
+																			if (t) {
+																				var e = (t.groups || {}).original_link
+																				return e ? e.slice(0, -1) : n
+																			}
+																			return n
+																		})(e.href)
+																	)
+															})
+													},
+													t = 0,
+													e = document.links.length;
+												t < e;
+												t++
+											)
+												n(t)
+										})()
+									}),
+									null === (i = l.parentNode) ||
+										void 0 === i ||
+										i.insertBefore(s, l)
+							})(r, a)
+						}))
+				})(
+					''
+						.concat('/cf/tags', '/')
+						.concat(
+							new URL(window.location.href).searchParams.get('cftmid') ||
+								'{{__CONTAINER_ID__}}'
+						),
+					((m = new URL(window.location.href).searchParams.get(t)),
+					(d = new RegExp('(^| )'.concat('cf_cpid', '=([^;]+)'))),
+					(p = ((h = document.cookie.match(d)) && h.pop()) || null),
+					m || p || '{{__CAMPAIGN_ID__}}')
+				)
+			})()
+		</script>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: 'Roboto', sans-serif;
+				background-color: #ffffff;
+				color: #333;
+				line-height: 1.6;
+			}
+
+			/* Header */
+			.header {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.header-content {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 13px 16px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				max-width: 1040px;
+				background-color: #000000;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+
+			.logo-section {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+			}
+
+			.walmart-logo {
+				width: 40px;
+				height: 40px;
+				background-color: #0071dc;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-weight: bold;
+				font-size: 11px;
+				line-height: 1;
+			}
+
+			.program-title {
+				color: white;
+				font-size: 24px;
+				font-weight: 500;
+			}
+
+			.program-title .shop {
+				color: #64b5f6;
+			}
+
+			.program-title .smart {
+				color: #64b5f6;
+			}
+
+			.program-title .program {
+				color: #dc3123;
+			}
+
+			.help-button {
+				background: none;
+				color: black;
+				background-color: white;
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				cursor: pointer;
+				font-size: 20px;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* Timer Bar */
+			.timer-section {
+				background-color: #2e2b62;
+				color: white;
+				padding: 8px 0;
+				text-align: center;
+				font-weight: bold;
+				font-size: 14px;
+				display: none;
+				max-width: 1040px;
+				width: 100%;
+			}
+
+			/* Main Content */
+			.main-content {
+				max-width: 680px;
+				margin: 0 auto;
+				padding: 40px 20px;
+				text-align: start;
+			}
+
+			.main-heading {
+				font-size: 28px;
+				color: #293f58;
+				margin-bottom: 25px;
+				font-weight: 600;
+				line-height: 1.3;
+			}
+
+			.offer-text {
+				font-size: 16px;
+				color: #333;
+				margin-bottom: 20px;
+				line-height: 1.5;
+			}
+
+			.highlight-red {
+				background-color: #dc3123;
+				color: white;
+				padding: 2px 8px;
+				border-radius: 4px;
+				font-weight: bold;
+			}
+
+			.excitement-text {
+				font-size: 16px;
+				color: #333;
+				margin-bottom: 15px;
+			}
+
+			.start-highlight {
+				background-color: #dc3123;
+				color: white;
+				padding: 2px 8px;
+				border-radius: 4px;
+				font-weight: bold;
+			}
+
+			.timer-text {
+				font-size: 16px;
+				color: #333;
+				margin-bottom: 30px;
+			}
+
+			.timer-number {
+				font-weight: bold;
+				color: #dc3123;
+			}
+
+			/* Main Illustration */
+			.main-illustration {
+				margin: 40px 0;
+				max-width: 400px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.main-illustration img {
+				width: 100%;
+				height: auto;
+			}
+
+			/* Start Button */
+			.start-button {
+				width: 100%;
+				border-radius: 15px;
+				border: 2px solid white;
+				background-color: #f12114;
+				box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.45);
+				color: white;
+				font-weight: bold;
+				font-size: 1.2rem;
+				padding: 14px 20px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.start-button:hover {
+				background-color: #b82a1c;
+			}
+
+			/* Survey Container */
+			.survey-container {
+				display: none;
+				max-width: 600px;
+				margin: 40px auto;
+				background: white;
+				border-radius: 12px;
+				padding: 40px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			}
+
+			.question-header {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.question-counter {
+				background-color: #293f58;
+				color: white;
+				padding: 8px 20px;
+				border-radius: 20px;
+				font-size: 14px;
+				display: inline-block;
+				margin-bottom: 20px;
+			}
+
+			.question-text {
+				font-size: 22px;
+				color: #333;
+				font-weight: 500;
+				margin-bottom: 30px;
+			}
+
+			.question-subtitle {
+				font-size: 16px;
+				color: #666;
+				margin-bottom: 25px;
+				font-style: italic;
+			}
+
+			.answer-options {
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+
+			.answer-button {
+				background-color: #64b5f6;
+				color: white;
+				font-size: 16px;
+				font-weight: 500;
+				padding: 15px 20px;
+				border: none;
+				border-radius: 25px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.answer-button:hover {
+				background-color: #42a5f5;
+			}
+
+			/* Results */
+			.result-container {
+				display: none;
+				max-width: 600px;
+				margin: 40px auto;
+				background: white;
+				border-radius: 12px;
+				padding: 40px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				text-align: center;
+			}
+
+			.congratulations {
+				font-size: 28px;
+				color: #48aa77;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+
+			.continue-button {
+				background-color: #48aa77;
+				color: white;
+				font-size: 18px;
+				font-weight: bold;
+				padding: 15px 40px;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				text-decoration: none;
+				display: inline-block;
+				margin: 20px 0;
+				text-transform: uppercase;
+			}
+
+			.continue-button:hover {
+				background-color: #3d8b63;
+			}
+
+			.sorry-container {
+				display: none;
+				text-align: center;
+				margin: 40px auto 0;
+				max-width: 600px;
+				background: #fff;
+				border-radius: 12px;
+				padding: 20px 16px;
+				border: 2px solid #dc3123;
+			}
+
+			.sorry-title {
+				font-size: 24px;
+				color: #dc3123;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+
+			.try-again-button {
+				background-color: #64b5f6;
+				color: white;
+				font-size: 16px;
+				font-weight: bold;
+				padding: 12px 30px;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				text-transform: uppercase;
+				margin-top: 20px;
+			}
+
+			/* Comments Section */
+			.comments-section {
+				max-width: 680px;
+				margin: 60px auto 0;
+				padding: 0 20px;
+			}
+
+			.comments-header {
+				font-size: 22px;
+				color: #333;
+				margin-bottom: 20px;
+				font-weight: 500;
+			}
+
+			.comments-stats {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 20px;
+				font-size: 14px;
+				font-weight: 600;
+				color: #333333;
+			}
+
+			.comment-form {
+				margin-bottom: 30px;
+				border-top: 1px solid #eee;
+				padding-top: 30px;
+			}
+
+			.comment-textarea {
+				width: 100%;
+				min-height: 80px;
+				padding: 15px;
+				border: 1px solid #ddd;
+				font-family: inherit;
+				font-size: 14px;
+				resize: vertical;
+			}
+
+			.comment {
+				display: flex;
+				margin-bottom: 25px;
+				padding-bottom: 20px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.comment-avatar {
+				width: 50px;
+				height: 50px;
+				margin-right: 15px;
+				overflow: hidden;
+				flex-shrink: 0;
+			}
+
+			.comment-avatar img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.comment-content {
+				flex: 1;
+			}
+
+			.comment-author {
+				font-weight: bold;
+				color: #3b82f6;
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+
+			.comment-text {
+				font-size: 14px;
+				color: #333;
+				margin-bottom: 10px;
+				line-height: 1.4;
+			}
+
+			.comment-image {
+				max-width: 200px;
+				border-radius: 8px;
+				margin: 10px 0;
+			}
+
+			.comment-actions {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 12px;
+				color: #3b82f6;
+			}
+
+			.comment-action {
+				cursor: pointer;
+				font-weight: 600;
+			}
+
+			.comment-action:hover {
+				text-decoration: underline;
+			}
+
+			.comment-time {
+				color: #666;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+			}
+
+			.load-more {
+				background-color: #3b82f6;
+				color: white;
+				padding: 12px 30px;
+				border: none;
+				border-radius: 6px;
+				font-size: 14px;
+				cursor: pointer;
+				width: 100%;
+				margin: 20px 0;
+			}
+
+			.facebook-plugin {
+				text-align: start;
+				padding: 14px 0;
+				font-size: 12px;
+				color: #3b82f6;
+				border-bottom: 1px solid #eee;
+				border-top: 1px solid #eee;
+			}
+
+			.facebook-plugin a {
+				color: #3b82f6;
+				text-decoration: none;
+			}
+
+			/* Additional Comments (initially hidden) */
+			.additional-comments {
+				display: none;
+			}
+
+			/* Footer */
+			.footer {
+				background-color: #fff;
+				padding: 20px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.legal-links {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				margin-bottom: 30px;
+				flex-wrap: wrap;
+			}
+
+			.legal-icon {
+				width: 40px;
+				height: 40px;
+			}
+
+			.legal-links a {
+				color: #333;
+				text-decoration: none;
+				font-size: 14px;
+			}
+
+			.legal-links a:hover {
+				text-decoration: underline;
+			}
+
+			.footer-text {
+				font-size: 12px;
+				color: #666;
+				line-height: 1.5;
+				margin-bottom: 20px;
+				max-width: 500px;
+			}
+
+			.footer-disclaimer {
+				font-size: 12px;
+				color: #666;
+				line-height: 1.5;
+				margin-bottom: 20px;
+				max-width: 420px;
+			}
+
+			.footer-copyright {
+				font-size: 14px;
+				color: #333;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.payment-logo {
+				height: 50px;
+			}
+
+			.survey-box {
+				background: #fff;
+				max-width: 680px;
+				margin: 10px auto 0;
+				padding: 38px 22px;
+			}
+			.question-row {
+				margin-bottom: 30px;
+			}
+			.question-counter-active {
+				background-color: #dc3123;
+				color: white !important;
+				padding: 0px 8px;
+				border-radius: 4px;
+				font-weight: 600;
+				font-size: 16px;
+				display: inline-block;
+				position: relative;
+				margin-top: 20px;
+			}
+
+			.question-counter-span {
+				font-size: 28px;
+				padding: 0 4px 0 4px;
+				background-color: #dc3123;
+				color: white !important;
+				position: absolute;
+				border-radius: 12px;
+				top: -10px;
+				right: 28px;
+				line-height: normal;
+				font-weight: 600;
+			}
+
+			.question-counter {
+				color: #c1c1c1;
+				background: #f7f7f7;
+				padding: 2px 12px;
+				border-radius: 16px;
+				font-size: 16px;
+				margin-bottom: 10px;
+				display: inline-block;
+			}
+			.question-main {
+				margin-top: 8px;
+			}
+			.question-title {
+				font-weight: bold;
+				color: #222;
+				font-size: 30px;
+				margin-bottom: 7px;
+			}
+			.question-sub {
+				color: #888;
+				font-size: 14px;
+				margin-bottom: 18px;
+			}
+			.survey-btn {
+				width: 100%;
+				background: #f12114;
+				color: #fff;
+				font-size: 16px;
+				font-weight: 600;
+				border: none;
+				border-radius: 11px;
+				padding: 13px 0;
+				margin-bottom: 30px;
+				cursor: pointer;
+				opacity: 0.42;
+				pointer-events: none;
+				transition: opacity 0.18s;
+				transition: background-color 0.3s;
+			}
+			.survey-btn:hover {
+				background-color: #b82a1c;
+			}
+			.survey-btn.active {
+				opacity: 1;
+				pointer-events: auto;
+			}
+			@media (max-width: 600px) {
+				.survey-box {
+					padding: 24px 6px;
+				}
+			}
+
+			.survey-question-row {
+				opacity: 1;
+				transform: translateY(0);
+				transition: all 0.8s cubic-bezier(0.33, 1.13, 0.48, 1.01);
+				margin-bottom: 28px;
+				position: relative;
+			}
+
+			.survey-question-row.slide-out-up {
+				opacity: 0;
+				transform: translateY(-60px) scale(0.98);
+				pointer-events: none;
+				height: 0 !important;
+				margin-bottom: 0 !important;
+				overflow: hidden;
+			}
+
+			.survey-question-row .survey-btn {
+				margin-bottom: 0;
+				margin-top: 10px;
+			}
+
+			.survey-question-row.inactive .survey-btn {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+
+			.survey-question-row.inactive .question-title {
+				color: #bbb;
+			}
+
+			.survey-question-row.active .survey-btn {
+				opacity: 1;
+				pointer-events: auto;
+			}
+
+			/* Сховати останній margin для компактності */
+			#surveyQuestionsWrapper .survey-question-row:last-child {
+				margin-bottom: 0;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.header-content {
+					padding: 0 15px;
+				}
+
+				.program-title {
+					font-size: 20px;
+				}
+
+				.main-heading {
+					font-size: 24px;
+					margin-bottom: 20px;
+				}
+
+				.main-illustration {
+					margin: 20px 0;
+				}
+
+				.survey-box {
+					margin-top: 10px;
+				}
+
+				.offer-text,
+				.excitement-text {
+					font-size: 14px;
+				}
+
+				.start-button {
+					font-size: 18px;
+					padding: 12px 40px;
+				}
+
+				.timer-text {
+					font-size: 14px;
+					margin-bottom: 10px;
+				}
+
+				.main-content {
+					padding: 20px 20px;
+				}
+
+				.survey-container,
+				.result-container,
+				.sorry-container {
+					margin: 20px;
+					padding: 30px 20px;
+				}
+
+				.survey-box {
+					padding: 0 20px;
+				}
+
+				.question-text {
+					font-size: 20px;
+				}
+
+				.legal-links {
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+
+			.fade-in {
+				animation: fadeIn 0.5s ease-in-out;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<div class="header">
+			<!-- Timer Section -->
+			<div class="timer-section" id="timerSection">
+				YOUR PLACE IS SECURED FOR <span id="timerDisplay">3:00</span>
+			</div>
+			<div class="header-content">
+				<div class="logo-section">
+					<a href="/">
+						<img
+							src="https://usagrowthhub.com/gift-voucher/assets/img/logo.png"
+							alt="logo"
+							style="width: 80%; height: auto; max-width: 380px"
+						/>
+					</a>
+				</div>
+				<button class="help-button" id="helpBtn">?</button>
+			</div>
+		</div>
+
+		<!-- Main Landing Page -->
+		<div id="landingPage">
+			<div class="main-content">
+				<h1 class="main-heading">
+					Exciting times! You are one of the first to join the Shop Smart
+					Program!
+				</h1>
+
+				<p class="offer-text">
+					Answer 3 simple questions about your shopping routine, and get a
+					<span class="highlight-red">$750 WALMART</span>
+					<span class="highlight-red">Gift Card</span>. Don't miss out on this
+					fantastic offer!
+				</p>
+
+				<p class="excitement-text">
+					Excited to get more from your shopping? Click on the
+					<span class="start-highlight">START</span> button below.
+				</p>
+
+				<p class="timer-text">
+					You will have exactly <span class="timer-number">3 minutes</span> to
+					secure your reward.
+				</p>
+
+				<div class="main-illustration">
+					<img
+						src="https://globalreward.net/walmart-pr/img/c232de3d-2817-498f-9a9e-f6319df05672.png"
+						alt="Shop Smart Program Illustration"
+					/>
+				</div>
+
+				<button class="start-button" id="startBtn">START</button>
+			</div>
+		</div>
+
+		<!-- Survey Container -->
+
+		<!-- <div id="surveyStyledContainer" style="display: none">
+			<div class="survey-box">
+
+				<div class="question-row" id="questionRow1">
+					<span class="question-counter-active"
+						>Question <span class="question-counter-span">1</span
+						><span style="margin-left: 30px">/3</span></span
+					>
+					<div class="question-main">
+						<div class="question-title">Do you live in the USA?</div>
+						<div class="question-sub">
+							We are looking for participants from the U.S.
+						</div>
+						<button
+							class="survey-btn active"
+							onclick="nextStyledQuestion(1, 0)"
+						>
+							Yes
+						</button>
+						<button
+							class="survey-btn active"
+							onclick="nextStyledQuestion(1, 1)"
+						>
+							No
+						</button>
+					</div>
+				</div>
+
+				<div class="question-row" id="questionRow2">
+					<span class="question-counter"
+						>Question <span class="question-counter-span">2</span
+						><span style="margin-left: 30px">/3</span></span
+					>
+					<div class="question-main">
+						<div class="question-title">How often do you shop at Walmart?</div>
+						<button class="survey-btn" onclick="nextStyledQuestion(2, 0)">
+							Daily
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(2, 1)">
+							Weekly
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(2, 2)">
+							Monthly
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(2, 3)">
+							Never
+						</button>
+					</div>
+				</div>
+
+				<div class="question-row" id="questionRow3">
+					<span class="question-counter"
+						>Question <span class="question-counter-span">3</span
+						><span style="margin-left: 30px">/3</span></span
+					>
+					<div class="question-main">
+						<div class="question-title">
+							How do you usually discover deals and promotions at Walmart?
+						</div>
+						<button class="survey-btn" onclick="nextStyledQuestion(3, 0)">
+							Store flyers
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(3, 1)">
+							Social media
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(3, 2)">
+							Mobile app
+						</button>
+						<button class="survey-btn" onclick="nextStyledQuestion(3, 3)">
+							Friends/Family
+						</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div id="surveyStyledContainer" style="display: none">
+			<div class="survey-box" style="overflow: hidden">
+				<div
+					class="dynamic-question-counter"
+					style="text-align: start; margin-bottom: 18px"
+				>
+					<span class="question-counter-active"
+						>Question
+						<span id="questionNumber" class="question-counter-span">1</span
+						><span style="margin-left: 30px">/3</span></span
+					>
+				</div>
+				<div id="surveyQuestionsWrapper"></div>
+			</div>
+		</div>
+
+		<!-- Result block -->
+		<div
+			id="styledResult"
+			style="
+				display: none;
+				text-align: center;
+				margin: 40px auto;
+				max-width: 680px;
+				padding: 0 20px;
+			"
+		>
+			<div
+				class="congratulations"
+				style="
+					width: fit-content;
+					font-size: 28px;
+					margin-bottom: 20px;
+					background-color: #dc3123;
+					color: white;
+					padding: 2px 8px;
+					border-radius: 8px;
+					font-weight: bold;
+				"
+			>
+				Congratulations!
+			</div>
+			<div class="main-illustration">
+				<img
+					src="https://globalreward.net/walmart-pr/img/c232de3d-2817-498f-9a9e-f6319df05672.png"
+					alt="Shop Smart Program Illustration"
+				/>
+			</div>
+
+			<div class="question-card fade-in" style="text-align: center">
+				<div
+					style="
+						display: flex;
+						flex-direction: column;
+						gap: 12px;
+						margin-bottom: 20px;
+					"
+				>
+					<div
+						style="
+							display: flex;
+							align-items: flex-start;
+							gap: 12px;
+							background-color: #eef5ff;
+							padding: 10px;
+							border-radius: 8px;
+							border: 1px solid;
+							border-color: #bfdbfe;
+						"
+					>
+						<div
+							style="
+								width: 34px;
+								height: 34px;
+								background-color: #3b82f6;
+								border-radius: 50%;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								style="width: inherit"
+							>
+								<path
+									d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+								></path>
+								<path d="M12 22V12"></path>
+								<path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path>
+								<path d="m7.5 4.27 9 5.15"></path>
+							</svg>
+						</div>
+
+						<div
+							style="
+								display: flex;
+								flex-direction: column;
+								align-items: flex-start;
+							"
+						>
+							<p
+								style="
+									font-weight: bold;
+									color: #1e40af;
+									margin-bottom: 2px;
+									font-size: 14px;
+								"
+							>
+								Confirm your delivery details
+							</p>
+							<p style="color: #1d4ed8; font-size: 12px; text-align: start">
+								Click the "CONTINUE" button: Let us know where we should send
+								your exclusive $750 Walmart Gift Card.
+							</p>
+						</div>
+					</div>
+
+					<div
+						style="
+							display: flex;
+							align-items: flex-start;
+							gap: 12px;
+							background-color: #f5e9ff;
+							padding: 10px;
+							border-radius: 8px;
+							border: 1px solid;
+							border-color: #e9d5ff;
+						"
+					>
+						<div
+							style="
+								width: 34px;
+								height: 34px;
+								background-color: #a855f7;
+								border-radius: 50%;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								style="width: inherit"
+							>
+								<rect x="3" y="8" width="18" height="4" rx="1"></rect>
+								<path d="M12 8v13"></path>
+								<path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+								<path
+									d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"
+								></path>
+							</svg>
+						</div>
+						<div
+							style="
+								display: flex;
+								flex-direction: column;
+								align-items: flex-start;
+							"
+						>
+							<p
+								style="
+									font-weight: bold;
+									font-size: 14px;
+									color: #6b21a8;
+									margin-bottom: 2px;
+								"
+							>
+								Unlock your DOUBLE reward
+							</p>
+							<p style="color: #a022d7; font-size: 12px">
+								Complete our sponsored deals. Each deal that you complete will
+								increase your reward.
+							</p>
+						</div>
+					</div>
+
+					<div
+						style="
+							display: flex;
+							align-items: flex-start;
+							gap: 12px;
+							background-color: #ecfdf5;
+							padding: 10px;
+							border-radius: 8px;
+							border: 1px solid;
+							border-color: #bbf7d0;
+						"
+					>
+						<div
+							style="
+								width: 34px;
+								height: 34px;
+								background-color: #22c55e;
+								border-radius: 50%;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								style="width: inherit"
+							>
+								<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+								<path
+									d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+								></path>
+							</svg>
+						</div>
+						<div
+							style="
+								display: flex;
+								flex-direction: column;
+								align-items: flex-start;
+							"
+						>
+							<p
+								style="
+									font-weight: bold;
+									font-size: 14px;
+									color: #166534;
+									margin-bottom: 4px;
+								"
+							>
+								Prepare for the reveal
+							</p>
+							<p style="color: #15803d; font-size: 12px">
+								Your $750 Walmart Gift Card will be delivered to your home. We
+								guarantee delivery in just 5 days.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				Click the button below to enter your delivery details and claim your
+				$750 gift card.
+			</p>
+			<a
+				href="https://suggestionsfinder.com/cf/click/1"
+				style="
+					background: #dc3123;
+					color: #fff;
+					padding: 12px 40px;
+					font-size: 18px;
+					font-weight: bold;
+					width: 100%;
+					display: inline-block;
+					text-decoration: none;
+					margin: 20px 0;
+					text-transform: uppercase;
+					max-width: 640px;
+				"
+				>CONTINUE</a
+			>
+		</div>
+		<!-- Block Sorry -->
+		<div id="styledSorry" class="sorry-container">
+			<div
+				class="sorry-title"
+				style="
+					font-size: 30px;
+					color: #000;
+					font-weight: bold;
+					margin-bottom: 20px;
+				"
+			>
+				We're sorry
+			</div>
+			<p style="text-align: start">
+				Based on your quiz answers, you are not suitable for the requirements of
+				this program. If you think you made a mistake and want to retake the
+				quiz, click the button below:
+			</p>
+			<button
+				class="try-again-button"
+				onclick="restartStyledQuiz()"
+				style="
+					background: #dc3123;
+					color: white;
+					width: calc(100% - 80px);
+					font-size: 16px;
+					font-weight: bold;
+					padding: 14px 30px;
+					border: none;
+					border-radius: 8px;
+					cursor: pointer;
+					text-transform: uppercase;
+					margin-top: 20px;
+				"
+			>
+				TRY AGAIN
+			</button>
+		</div>
+
+		<!-- Comments Section -->
+		<div class="comments-section">
+			<h2 class="comments-header">Read what others say about our program:</h2>
+
+			<div class="comments-stats">
+				<span>130 comments</span>
+				<span
+					><span style="font-weight: 400">Sort by</span>
+					<span
+						style="
+							background-color: #e5e7eb;
+							padding: 4px 8px;
+							font-size: 12px;
+							border: 1px solid #d1d5db;
+						"
+						>Newest
+						<svg
+							width="10"
+							height="10"
+							aria-hidden="true"
+							focusable="false"
+							data-prefix="fas"
+							data-icon="sort"
+							role="img"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 320 512"
+						>
+							<path
+								fill="#374151"
+								d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z"
+							></path></svg></span
+				></span>
+			</div>
+
+			<div class="comment-form">
+				<textarea
+					class="comment-textarea"
+					placeholder="Add a comment..."
+				></textarea>
+			</div>
+
+			<!-- Initial Comments -->
+			<div class="comment">
+				<div class="comment-avatar">
+					<img
+						src="https://usagrowthhub.com/gift-voucher/assets/images/14.jpg"
+						alt="Elizabeth Amber"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Elizabeth Amber</div>
+					<div class="comment-text">
+						I just received my Walmart gift card, and I'm thrilled! Thank you,
+						Shop Smart Program!
+					</div>
+					<img
+						src="https://ext.same-assets.com/2343320519/3341877192.jpeg"
+						alt="Receipt"
+						class="comment-image"
+					/>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							1 · a week ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="comment">
+				<div class="comment-avatar">
+					<img
+						src="https://ext.same-assets.com/2343320519/725311910.jpeg"
+						alt="Linda Bailey"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Linda Bailey</div>
+					<div class="comment-text">
+						Disappointed that I didn't get it, but happy for those who did. I'll
+						try again next time
+					</div>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							1 · a week ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="comment">
+				<div class="comment-avatar">
+					<img
+						src="https://ext.same-assets.com/2343320519/696332833.jpeg"
+						alt="Susan Barbara"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Susan Barbara</div>
+					<div class="comment-text">
+						It just arrived, already did some shopping. Thanks a ton guys!
+					</div>
+					<img
+						src="https://usagrowthhub.com/gift-voucher/assets/images/test1.jpg"
+						alt="Shopping cart"
+						class="comment-image"
+					/>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							3 · a week ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Shop Smart Program Reply -->
+			<div class="comment" style="margin-left: 50px">
+				<div class="comment-avatar">
+					<img
+						src="https://ext.same-assets.com/2343320519/428756229.png"
+						alt="Shop Smart Program"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Shop Smart Program</div>
+					<div class="comment-text">
+						We hope you find everything you need, Barbara! Enjoy!
+					</div>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							16 · a week ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="comment" style="margin-left: 50px">
+				<div class="comment-avatar">
+					<img
+						src="https://ext.same-assets.com/2343320519/696332833.jpeg"
+						alt="Susan Barbara"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Susan Barbara</div>
+					<div class="comment-text">I'm sure I will!</div>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							3 · a week ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="comment">
+				<div class="comment-avatar">
+					<img
+						src="https://ext.same-assets.com/2343320519/3425215432.jpeg"
+						alt="Richard Richards"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Richard Richards</div>
+					<div class="comment-text">
+						I think it will be enough for my girlfriend for the whole month's
+						shopping
+					</div>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							7 · two weeks ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<div class="comment">
+				<div class="comment-avatar">
+					<img
+						src="https://usagrowthhub.com/gift-voucher/assets/images/20.jpg"
+						alt="Laura Hernandez"
+					/>
+				</div>
+				<div class="comment-content">
+					<div class="comment-author">Laura Hernandez</div>
+					<div class="comment-text">
+						I didn't spend even half of the amount, but I managed to get a lot.
+						I think they won a customer
+					</div>
+					<img
+						src="https://ext.same-assets.com/2343320519/3411566700.jpeg"
+						alt="Car trunk with groceries"
+						class="comment-image"
+					/>
+					<div class="comment-actions">
+						<span class="comment-action">Like</span>
+						<span class="comment-action">·</span>
+						<span class="comment-action">Reply</span>
+						<span class="comment-action">·</span>
+						<span class="comment-time"
+							><img
+								style="width: 16px; height: 16px"
+								src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+								alt="like"
+							/>
+							7 · two weeks ago</span
+						>
+					</div>
+				</div>
+			</div>
+
+			<!-- Additional Comments (initially hidden) -->
+			<div class="additional-comments" id="additionalComments">
+				<div class="comment">
+					<div class="comment-avatar">
+						<img
+							src="https://ext.same-assets.com/2343320519/329867925.jpeg"
+							alt="Paul Harris"
+						/>
+					</div>
+					<div class="comment-content">
+						<div class="comment-author">Paul Harris</div>
+						<div class="comment-text">No luck for me, but at least I tried</div>
+						<div class="comment-actions">
+							<span class="comment-action">Like</span>
+							<span class="comment-action">·</span>
+							<span class="comment-action">Reply</span>
+							<span class="comment-action">·</span>
+							<span class="comment-time"
+								><img
+									style="width: 16px; height: 16px"
+									src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+									alt="like"
+								/>
+								8 · two weeks ago</span
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment">
+					<div class="comment-avatar">
+						<img
+							src="https://ext.same-assets.com/2343320519/3215468527.jpeg"
+							alt="Sarah Trajbar"
+						/>
+					</div>
+					<div class="comment-content">
+						<div class="comment-author">Sarah Trajbar</div>
+						<div class="comment-text">
+							I had no more space for them in the trunk, so I put them wherever
+							I could. Thanks to the whole Shop Smart Program team:
+						</div>
+						<div class="comment-actions">
+							<span class="comment-action">Like</span>
+							<span class="comment-action">·</span>
+							<span class="comment-action">Reply</span>
+							<span class="comment-action">·</span>
+							<span class="comment-time"
+								><img
+									style="width: 16px; height: 16px"
+									src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+									alt="like"
+								/>
+								3 · two weeks ago</span
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment" style="margin-left: 50px">
+					<div class="comment-avatar">
+						<img
+							src="https://ext.same-assets.com/2343320519/428756229.png"
+							alt="Shop Smart Program"
+						/>
+					</div>
+					<div class="comment-content">
+						<div class="comment-author">Shop Smart Program</div>
+						<div class="comment-text">
+							That's what we like to hear, happy shopping!
+						</div>
+						<div class="comment-actions">
+							<span class="comment-action">Like</span>
+							<span class="comment-action">·</span>
+							<span class="comment-action">Reply</span>
+							<span class="comment-action">·</span>
+							<span class="comment-time"
+								><img
+									style="width: 16px; height: 16px"
+									src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+									alt="like"
+								/>
+								56 · two weeks ago</span
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment">
+					<div class="comment-avatar">
+						<img
+							src="https://ext.same-assets.com/2343320519/2872851177.jpeg"
+							alt="Gary Currier"
+						/>
+					</div>
+					<div class="comment-content">
+						<div class="comment-author">Gary Currier</div>
+						<div class="comment-text">
+							When I get home I will invite my friends to a barbecue
+						</div>
+						<div class="comment-actions">
+							<span class="comment-action">Like</span>
+							<span class="comment-action">·</span>
+							<span class="comment-action">Reply</span>
+							<span class="comment-action">·</span>
+							<span class="comment-time"
+								><img
+									style="width: 16px; height: 16px"
+									src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+									alt="like"
+								/>
+								12 · two weeks ago</span
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="comment">
+					<div class="comment-avatar">
+						<img
+							src="https://ext.same-assets.com/2343320519/1434108748.jpeg"
+							alt="Eric Feller"
+						/>
+					</div>
+					<div class="comment-content">
+						<div class="comment-author">Eric Feller</div>
+						<div class="comment-text">
+							What?? I just got accepted. Can't believe it!
+						</div>
+						<div class="comment-actions">
+							<span class="comment-action">Like</span>
+							<span class="comment-action">·</span>
+							<span class="comment-action">Reply</span>
+							<span class="comment-action">·</span>
+							<span class="comment-time"
+								><img
+									style="width: 16px; height: 16px"
+									src="https://usagrowthhub.com/gift-voucher/assets/images/like.svg"
+									alt="like"
+								/>
+								3 · two weeks ago</span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="load-more" id="loadMoreBtn">Load 5 more comments</button>
+
+			<div class="facebook-plugin">
+				<a
+					href="https://developers.facebook.com/products/social-plugins/comments/?utm_campaign=social_plugins&utm_medium=offsite_pages&utm_source=comments_plugin"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 448 512"
+						width="14"
+						height="14"
+					>
+						<path
+							fill="#2563eb"
+							d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+						></path>
+					</svg>
+					Facebook Comments Plugin</a
+				>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="legal-links">
+				<img
+					src="https://ext.same-assets.com/2343320519/3686918929.png"
+					alt="Legal"
+					class="legal-icon"
+				/>
+				<span style="font-weight: bold; font-size: 16px">LEGAL LINKS</span>
+			</div>
+
+			<div class="legal-links">
+				<a href="pages/terms-and-conditions.html">Terms and Conditions</a>
+				<a href="pages/privacy-policy.html">Privacy Policy</a>
+				<a href="pages/non-affiliation-disclaimer.html"
+					>Non-Affiliation Disclaimer</a
+				>
+			</div>
+
+			<div
+				style="
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				"
+			>
+				<div class="footer-text">
+					Trade names or rights associated with all trademarks on this website
+					are the property of their respective owners and are not associated
+					with this promotion. This offer ends at the end of 2024.
+				</div>
+
+				<div class="footer-disclaimer">
+					This website is not part of the Facebook website or of Facebook Inc.
+					Furthermore, this website is not endorsed in any way by Facebook.
+					Facebook is a trademark of Facebook, Inc.
+				</div>
+			</div>
+
+			<div style="max-width: 640px; width: 100%">
+				<div class="footer-copyright">
+					<div>
+						© 21/2024 —<a
+							style="text-decoration: none; font-weight: 600; color: #000"
+							href="#"
+							>Shop Smart Program.</a
+						>
+						All rights reserved.
+					</div>
+
+					<img
+						src="https://usagrowthhub.com/gift-voucher/assets/img/logo-small.png"
+						alt="Payment"
+						class="payment-logo"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let currentQuestion = 0
+			let timerInterval
+			let timeRemaining = 180 // 3 minutes in seconds
+
+			// const questions = [
+			// 	{
+			// 		text: 'Do you live in the USA?',
+			// 		subtitle: 'We are looking for participants from the U.S.',
+			// 		answers: ['Yes', 'No'],
+			// 		correctAnswer: 0,
+			// 	},
+			// 	{
+			// 		text: 'How often do you shop at Walmart?',
+			// 		subtitle: '',
+			// 		answers: ['Daily', 'Weekly', 'Monthly', 'Never'],
+			// 		correctAnswer: [0, 1, 2], // Accept Daily, Weekly, Monthly
+			// 	},
+			// 	{
+			// 		text: 'How do you usually discover deals and promotions at Walmart?',
+			// 		subtitle: '',
+			// 		answers: [
+			// 			'Store flyers',
+			// 			'Social media',
+			// 			'Mobile app',
+			// 			'Friends/Family',
+			// 		],
+			// 		correctAnswer: [0, 1, 2, 3], // Accept all answers
+			// 	},
+			// ]
+
+			function startTimer() {
+				const timerSection = document.getElementById('timerSection')
+				const timerDisplay = document.getElementById('timerDisplay')
+
+				timerSection.style.display = 'block'
+
+				timerInterval = setInterval(() => {
+					const minutes = Math.floor(timeRemaining / 60)
+					const seconds = timeRemaining % 60
+					timerDisplay.textContent = `${minutes}:${seconds
+						.toString()
+						.padStart(2, '0')}`
+
+					if (timeRemaining <= 0) {
+						clearInterval(timerInterval)
+						timerDisplay.textContent = '0:00'
+					}
+					timeRemaining--
+				}, 1000)
+			}
+
+			// function startQuiz() {
+			// 	document.getElementById('landingPage').style.display = 'none'
+			// 	document.getElementById('surveyContainer').style.display = 'block'
+			// 	document.getElementById('surveyContainer').classList.add('fade-in')
+			// 	startTimer()
+			// 	showQuestion(0)
+			// }
+
+			// function showQuestion(index) {
+			// 	const questionCounter = document.getElementById('questionCounter')
+			// 	const questionText = document.getElementById('questionText')
+			// 	const questionSubtitle = document.getElementById('questionSubtitle')
+			// 	const answerOptions = document.getElementById('answerOptions')
+
+			// 	questionCounter.textContent = `Question ${index + 1} / 3`
+			// 	questionText.textContent = questions[index].text
+			// 	questionSubtitle.textContent = questions[index].subtitle
+
+			// 	// Clear existing buttons
+			// 	answerOptions.innerHTML = ''
+
+			// 	// Create new buttons for this question
+			// 	questions[index].answers.forEach((answer, i) => {
+			// 		const button = document.createElement('button')
+			// 		button.className = 'answer-button'
+			// 		button.textContent = answer
+			// 		button.onclick = () => handleAnswer(i)
+			// 		answerOptions.appendChild(button)
+			// 	})
+			// }
+
+			// function handleAnswer(answerIndex) {
+			// 	const question = questions[currentQuestion]
+
+			// 	// Check if answer is correct
+			// 	let isCorrect = false
+			// 	if (Array.isArray(question.correctAnswer)) {
+			// 		isCorrect = question.correctAnswer.includes(answerIndex)
+			// 	} else {
+			// 		isCorrect = answerIndex === question.correctAnswer
+			// 	}
+
+			// 	if (!isCorrect) {
+			// 		showSorry()
+			// 		return
+			// 	}
+
+			// 	// Move to next question or show result
+			// 	currentQuestion++
+			// 	if (currentQuestion < questions.length) {
+			// 		showQuestion(currentQuestion)
+			// 	} else {
+			// 		showResult()
+			// 	}
+			// }
+
+			// function showResult() {
+			// 	document.getElementById('surveyContainer').style.display = 'none'
+			// 	document.getElementById('resultContainer').style.display = 'block'
+			// 	document.getElementById('resultContainer').classList.add('fade-in')
+			// }
+
+			// function showSorry() {
+			// 	document.getElementById('surveyContainer').style.display = 'none'
+			// 	document.getElementById('sorryContainer').style.display = 'block'
+			// 	document.getElementById('sorryContainer').classList.add('fade-in')
+			// }
+
+			// function restartQuiz() {
+			// 	currentQuestion = 0
+			// 	timeRemaining = 180
+			// 	clearInterval(timerInterval)
+
+			// 	document.getElementById('sorryContainer').style.display = 'none'
+			// 	document.getElementById('resultContainer').style.display = 'none'
+			// 	document.getElementById('landingPage').style.display = 'block'
+			// 	document.getElementById('timerSection').style.display = 'none'
+			// }
+
+			// Load more comments functionality
+			function loadMoreComments() {
+				const additionalComments = document.getElementById('additionalComments')
+				const loadMoreBtn = document.getElementById('loadMoreBtn')
+
+				additionalComments.style.display = 'block'
+				loadMoreBtn.style.display = 'none'
+
+				// Update comments count
+				const commentsStats = document.querySelector('.comments-stats span')
+				commentsStats.textContent = '135 comments'
+			}
+
+			// Event listeners
+			// document.getElementById('startBtn').addEventListener('click', startQuiz)
+			document
+				.getElementById('loadMoreBtn')
+				.addEventListener('click', loadMoreComments)
+
+			document.getElementById('helpBtn').addEventListener('click', function () {
+				alert(
+					'Frequently Asked Questions\n\nWHAT ARE THE PARTICIPATION REQUIREMENTS?\nYou must be over 18 years old and live in the US.\n\nWHAT CAN I GET FROM THIS PROGRAM?\nBy participating in the Shop Smart Program, you can receive a $750 Walmart gift card.'
+				)
+			})
+
+			// // Після кліку "START" приховуєш лендінг і показуєш опитування:
+			// document.getElementById('startBtn').onclick = function () {
+			// 	document.getElementById('landingPage').style.display = 'none'
+			// 	document.getElementById('surveyStyledContainer').style.display = 'block'
+			// 	currentStyledStep = 0
+			// 	updateStyledSurveyStep(currentStyledStep)
+			// 	startTimer()
+			// }
+
+			// // Логіка опитування
+			// const correctAnswers = [0, [0, 1, 2], [0, 1, 2, 3]]
+			// let userAnswers = []
+			// let currentStyledStep = 0
+
+			// function updateStyledSurveyStep(step) {
+			// 	for (let i = 1; i <= 3; i++) {
+			// 		let row = document.getElementById('questionRow' + i)
+			// 		if (i - 1 === step) {
+			// 			row
+			// 				.querySelectorAll('.survey-btn')
+			// 				.forEach(btn => btn.classList.add('active'))
+			// 			row.querySelector(
+			// 				'.question-counter-active, .question-counter'
+			// 			).style.color = '#dc3123'
+			// 		} else {
+			// 			row
+			// 				.querySelectorAll('.survey-btn')
+			// 				.forEach(btn => btn.classList.remove('active'))
+			// 			row.querySelector(
+			// 				'.question-counter-active, .question-counter'
+			// 			).style.color = '#c1c1c1'
+			// 		}
+			// 	}
+			// }
+
+			// function nextStyledQuestion(step, answer) {
+			// 	// Перевірка відповіді
+			// 	let valid = false
+			// 	if (Array.isArray(correctAnswers[step - 1])) {
+			// 		valid = correctAnswers[step - 1].includes(answer)
+			// 	} else {
+			// 		valid = correctAnswers[step - 1] === answer
+			// 	}
+			// 	if (!valid) {
+			// 		// wrong answer
+			// 		document.getElementById('surveyStyledContainer').style.display =
+			// 			'none'
+			// 		document.getElementById('styledSorry').style.display = 'block'
+			// 		return
+			// 	}
+			// 	userAnswers[step - 1] = answer
+			// 	if (step < 3) {
+			// 		currentStyledStep = step
+			// 		updateStyledSurveyStep(currentStyledStep)
+			// 	} else {
+			// 		// FINISH
+			// 		document.getElementById('surveyStyledContainer').style.display =
+			// 			'none'
+			// 		document.getElementById('styledResult').style.display = 'block'
+			// 	}
+			// }
+
+			// function restartStyledQuiz() {
+			// 	document.getElementById('styledSorry').style.display = 'none'
+			// 	document.getElementById('styledResult').style.display = 'none'
+			// 	document.getElementById('landingPage').style.display = 'block'
+			// 	currentStyledStep = 0
+			// 	userAnswers = []
+			// 	updateStyledSurveyStep(currentStyledStep)
+			// }
+			const surveyQuestions = [
+				{
+					text: 'Do you live in the USA?',
+					sub: 'We are looking for participants from the U.S.',
+					answers: ['Yes', 'No'],
+					correct: 0,
+				},
+				{
+					text: 'How often do you shop at Walmart?',
+					sub: '',
+					answers: ['Daily', 'Weekly', 'Monthly', 'Never'],
+					correct: [0, 1, 2],
+				},
+				{
+					text: 'How do you usually discover deals and promotions at Walmart?',
+					sub: '',
+					answers: [
+						'Store flyers',
+						'Social media',
+						'Mobile app',
+						'Friends/Family',
+					],
+					correct: [0, 1, 2, 3],
+				},
+			]
+
+			let currentSurveyStep = 0
+			let userSurveyAnswers = []
+
+			function renderFullSurvey(step) {
+				const wrapper = document.getElementById('surveyQuestionsWrapper')
+				wrapper.innerHTML = ''
+
+				surveyQuestions.forEach((q, idx) => {
+					// визначаємо стан рядка
+					let rowClass = ''
+					if (idx < step) {
+						rowClass = 'survey-question-row answered slide-out-up'
+					} else if (idx === step) {
+						rowClass = 'survey-question-row active'
+					} else {
+						rowClass = 'survey-question-row inactive'
+					}
+
+					const sub = q.sub ? `<div class="question-sub">${q.sub}</div>` : ''
+
+					const btns = q.answers
+						.map((a, i) => {
+							const disabled = idx === step ? '' : 'disabled'
+							return `<button class="survey-btn${
+								idx === step ? ' active' : ''
+							}" data-answer="${i}" ${disabled}>${a}</button>`
+						})
+						.join('')
+
+					const row = document.createElement('div')
+					row.className = rowClass
+					row.id = `questionRow${idx + 1}`
+					row.innerHTML = `
+			<div class="question-main">
+				<div class="question-title" style="margin-bottom:8px;">${q.text}</div>
+				${sub}
+				<div style="margin-top:18px;display:flex;flex-direction:column;gap:14px;">${btns}</div>
+			</div>
+		`
+
+					// Якщо це активний рядок — чіпляємо click
+					if (idx === step) {
+						row.querySelectorAll('.survey-btn').forEach(btn => {
+							btn.onclick = function () {
+								handleSurveyAnswer(idx, parseInt(this.dataset.answer), row)
+							}
+						})
+					}
+
+					wrapper.appendChild(row)
+				})
+
+				// Оновити лічильник питання
+				document.getElementById('questionNumber').textContent = step + 1
+			}
+
+			function handleSurveyAnswer(idx, answerIdx, rowDiv) {
+				const q = surveyQuestions[idx]
+				const correct = Array.isArray(q.correct) ? q.correct : [q.correct]
+				const valid = correct.includes(answerIdx)
+
+				if (!valid) {
+					document.getElementById('surveyStyledContainer').style.display =
+						'none'
+					document.getElementById('styledSorry').style.display = 'block'
+					return
+				}
+				userSurveyAnswers[idx] = answerIdx
+
+				// Анімація зникнення
+				rowDiv.classList.add('slide-out-up')
+				rowDiv.classList.remove('active')
+
+				setTimeout(() => {
+					currentSurveyStep = idx + 1
+					if (currentSurveyStep < surveyQuestions.length) {
+						renderFullSurvey(currentSurveyStep)
+					} else {
+						document.getElementById('surveyStyledContainer').style.display =
+							'none'
+						document.getElementById('styledResult').style.display = 'block'
+					}
+				}, 450)
+			}
+
+			function startStyledSurvey() {
+				currentSurveyStep = 0
+				userSurveyAnswers = []
+				document.getElementById('landingPage').style.display = 'none'
+				document.getElementById('surveyStyledContainer').style.display = 'block'
+				renderFullSurvey(0)
+				if (typeof startTimer === 'function') startTimer()
+			}
+
+			// Перезапуск з Sorry/Result
+			function restartStyledQuiz() {
+				document.getElementById('styledSorry').style.display = 'none'
+				document.getElementById('styledResult').style.display = 'none'
+				document.getElementById('landingPage').style.display = 'block'
+				currentSurveyStep = 0
+				userSurveyAnswers = []
+			}
+
+			document.getElementById('startBtn').onclick = startStyledSurvey
+
+			// Прив'язати "Try Again" — (може бути вже у тебе, продублюю для надійності)
+			if (document.getElementById('styledSorry')) {
+				document.getElementById('styledSorry').querySelector('button').onclick =
+					restartStyledQuiz
+			}
+		</script>
+	</body>
+</html>
